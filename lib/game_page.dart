@@ -103,25 +103,31 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('SnakeGameFlutter', style: TextStyle(color: Colors.white, fontSize: 20.0)),
+        title: Text('SnakeBaby',
+            style: TextStyle(
+              color: const Color.fromARGB(255, 28, 24, 24), fontSize: 20.0, fontWeight: FontWeight.w500, // light
+              fontStyle: FontStyle.normal,
+            )),
         centerTitle: false,
-        backgroundColor: Colors.redAccent,
+        backgroundColor: const Color.fromARGB(255, 17, 241, 58),
         actions: <Widget>[
           Center(
               child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: Text('Score: $_playerScore', style: TextStyle(fontSize: 16.0)),
+            child: Text('Point: $_playerScore', style: TextStyle(fontSize: 16.0)),
           ))
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton.extended(
-          backgroundColor: Colors.redAccent,
+          backgroundColor: const Color.fromARGB(255, 13, 206, 112),
           elevation: 20,
           label: Text(
             _hasStarted ? 'Start' : 'Pause',
             style: TextStyle(),
           ),
+          shape: RoundedRectangleBorder(
+              side: BorderSide(width: 3, color: const Color.fromARGB(255, 6, 203, 108)), borderRadius: BorderRadius.circular(20)),
           onPressed: () {
             setState(() {
               if (_hasStarted)
@@ -155,19 +161,19 @@ class _GamePageState extends State<GamePage> with TickerProviderStateMixin {
                 return Center(
                   child: Container(
                     color: Colors.white,
-                    padding: _snake.contains(index) ? EdgeInsets.all(1) : EdgeInsets.all(0),
+                    padding: _snake.contains(index) ? EdgeInsets.all(3) : EdgeInsets.all(1),
                     child: ClipRRect(
                       borderRadius: index == _snakeFoodPosition || index == _snake.last
                           ? BorderRadius.circular(7)
                           : _snake.contains(index)
-                              ? BorderRadius.circular(2.5)
+                              ? BorderRadius.circular(0)
                               : BorderRadius.circular(1),
                       child: Container(
                           color: _snake.contains(index)
-                              ? Colors.black
+                              ? const Color.fromARGB(255, 200, 20, 197)
                               : index == _snakeFoodPosition
-                                  ? Colors.green
-                                  : Colors.blue),
+                                  ? const Color.fromARGB(255, 200, 20, 197)
+                                  : const Color.fromARGB(255, 59, 159, 242)),
                     ),
                   ),
                 );

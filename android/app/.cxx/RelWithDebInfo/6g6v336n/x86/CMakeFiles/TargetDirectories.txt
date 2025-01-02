@@ -1,0 +1,2 @@
+/Users/a/Desktop/MMO/SnakeGame/SnackGame/android/app/.cxx/RelWithDebInfo/6g6v336n/x86/CMakeFiles/rebuild_cache.dir
+/Users/a/Desktop/MMO/SnakeGame/SnackGame/android/app/.cxx/RelWithDebInfo/6g6v336n/x86/CMakeFiles/edit_cache.dir

@@ -1,0 +1,1 @@
+ /Users/a/Desktop/MMO/SnakeGame/SnackGame/.dart_tool/flutter_build/7805d77882a65c143004856b216d85a7/native_assets.json: 

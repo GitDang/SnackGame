@@ -1,1 +1,0 @@
-/Users/a/Desktop/MMO/SnakeGame/SnackGame/build/app/intermediates/cxx/Debug/6w5i1a5b/obj/arm64-v8a
